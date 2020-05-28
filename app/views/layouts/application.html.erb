@@ -11,6 +11,17 @@
   </head>
 
   <body>
+    <nav class='container-fluid'>
+        <div class='row'>
+          <div class="col-12 col-lg-6 d-flex justify-content-center text-center">
+            <%= link_to 'HeflerDev', '#', class:'logo col-10' %>
+          </div>
+          <div class="col-12 col-lg-6 d-flex justify-content-around p-0">
+            <%= link_to 'About Me', '#', class:'button col-6' %>
+            <%= link_to 'Contact', '#', class:'button col-6' %>
+          </div>
+        </div>
+    </nav>
     <%= yield %>
   </body>
 </html>

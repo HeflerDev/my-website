@@ -1,1 +1,24 @@
 @import "~bootstrap/scss/bootstrap";
+
+$color-text-light: whitesmoke ;
+$color-text-dark: rgb(30,30,30);
+$color-dark: rgb(26,26,26);
+$color-primary: gray;
+$color-secondary: lightgray;
+$color-accent: rgb(56,56,56);
+
+$radius-button: 1px;
+
+
+nav {
+  background-color: $color-primary;
+    .button {
+      font-size: 2.5rem ;
+      text-align: center ;
+      border: solid $color-dark 1px ;
+      border-radius: $radius-button ;
+    }
+    .logo{
+      font-size: 5rem ;
+    }
+}
