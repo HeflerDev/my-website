@@ -4,7 +4,8 @@ $breakpoints: (phone: 640px,
                tablet: 768px,
                desktop: 1024px) !default;
 
-$text-title-mobile: 72px;
+$text-mobile-huge: 72px;
+$text-mobile-big: 56px;
 $text-mobile: 42px;
 
 $color-text-light: whitesmoke ;
@@ -36,10 +37,28 @@ section {
   span{
     text-align: center;
     color: $color-text-dark;
-    font-size: $text-title-mobile;
+    font-size: $text-mobile-huge;
   }
   p {
     text-align: center;
     font-size: $text-mobile;
+  }
+}
+.pic-container {
+
+}
+.profile-pic {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  background-image: url('../../../app/assets/images/profile_pic.png');
+  background-position: center;
+  background-size: 90%;
+  margin: 20px auto;
+}
+
+.contact-container {
+  p {
+    font-size: $text-mobile-big;
   }
 }
