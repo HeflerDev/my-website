@@ -1,0 +1,69 @@
+@import "bootstrap";
+@import "./framework.scss"
+
+// Variables
+
+//Breakpoints
+$breakpoint-phone: 640px ;
+$breakpoint-tablet: 768px ;
+$breakpoint-desktop: 1024px ;
+
+//Text Sizing
+$text-mobile-huge: 72px;
+$text-mobile-big: 56px;
+$text-mobile: 42px;
+$text-tablet: 24px;
+
+//Useful Colors
+$color-text-light: whitesmoke ;
+$color-text-dark: rgb(30,30,30);
+$color-dark: rgb(26,26,26);
+$color-primary: gray;
+$color-secondary: lightgray;
+$color-accent: rgb(56,56,56);
+
+$radius-button: 1px;
+
+nav {
+  background-color: $color-primary;
+    .button {
+      font-size: 2.5rem ;
+      text-align: center ;
+      border: solid $color-dark 1px ;
+      border-radius: $radius-button ;
+    }
+    .logo {
+      font-size: 5rem ;
+    }
+}
+
+section {
+  text-align: center;
+  border: solid $color-primary 2px;
+  border-radius: 5px;
+  span{
+    text-align: center;
+    color: $color-text-dark;
+    font-size: $text-mobile-huge;
+  }
+  p {
+    text-align: center;
+    font-size: $text-mobile;
+  }
+}
+
+.profile-pic {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  //background-image: url('../../../app/assets/images/profile_pic.png');
+  background-position: center;
+  background-size: 90%;
+  margin: 20px auto;
+}
+
+.contact-container {
+  p {
+    font-size: $text-mobile-big;
+  }
+}
