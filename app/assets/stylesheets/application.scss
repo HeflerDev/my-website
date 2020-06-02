@@ -23,6 +23,11 @@
   $text-tablet: 24px;
   $text-desktop: 12px;
 
+  // Fonts
+  $font-primary: 'Poppins', sans-serif ;
+  $font-secondary: 'Source Serif Pro', serif ;
+  $font-accent: 'Source Code Pro', monospace;
+
   // App Colors
     // Text
     $color-text-light: whitesmoke ;
@@ -52,24 +57,26 @@
 
 .box {
   display: flex ;
+  width: 100%;
+  text-align: center ;
 
   @media screen and (max-device-width: $breakpoint-phone) {
-    margin: $margin ;
+    margin: auto ;
     padding: $padding ;
   }
 
   @media screen and (min-device-width: $breakpoint-phone) {
-    margin: $margin-s ;
+    margin: auto ;
     padding: $padding-s ;
   }
 
   @media screen and (min-device-width: $breakpoint-tablet) {
-      margin: $margin-m ;
+      margin: auto ;
       padding: $padding-m ;
   }
 
   @media screen and (min-device-width: $breakpoint-desktop) {
-      margin: $margin-l ;
+      margin: auto ;
       padding: $padding-l ;
   }
 
@@ -96,34 +103,34 @@
   .between {
     justify-content: space-between;
   }
-
 }
 
 .box-s {
   display: flex ;
+  width: 100% ;
 
   @media screen and (max-width: $breakpoint-phone) {
-    margin: $margin / 2 ;
-    padding: $padding / 2 ;
+    margin: auto ;
+    padding: $padding / 4 ;
   }
 
   @media screen and (min-width: $breakpoint-phone) {
-    margin: $margin-s / 2 ;
-    padding: $padding-s / 2 ;
+    margin: auto ;
+    padding: $padding-s / 4 ;
   }
 
   @media screen and (min-width: $breakpoint-tablet) {
-      margin: $margin-m / 2;
-      padding: $padding-m / 2;
+      margin: auto ;
+      padding: $padding-m / 4 ;
   }
 
   @media screen and (min-width: $breakpoint-desktop) {
-      margin: $margin-l / 2;
-      padding: $padding-l / 2;
+      margin: auto ;
+      padding: $padding-l / 4 ;
   }
 
   .column {
-    flex-direction: column;
+    flex-direction: column !important;
   }
 
   .start {
@@ -148,11 +155,34 @@
 
 }
 
-
+.btn {
+  border: solid $color-secondary 2px;
+  background: $color-accent ;
+  color: $color-secondary ;
+  transition: 0.2s;
+  &:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
+  }
+}
 
 .border-rounded {
-  border: solid $color-primary 2px;
+  border: solid $color-secondary 2px;
   border-radius: 5px;
+}
+
+.title {
+  color: $color-accent ;
+  text-decoration: none;
+  transition: 0.1s ;
+  font-family: $font-primary ;
+  font-size: $text-mobile-huge ;
+  &:hover {
+    transform: scale(1.1);
+    text-decoration: none;
+    color: $color-accent;
+    transition: 0.1s ;
+  }
 }
 
 nav {
@@ -183,10 +213,10 @@ section {
 }
 
 .profile-pic {
-  width: 30rem;
-  height: 30rem;
+  width: 10rem;
+  height: 10rem ;
   border-radius: 50%;
-  //background-image: url('../../../app/assets/images/profile_pic.png');
+  background-image: url(asset-path('my_pic.png'));
   background-position: center;
   background-size: 90%;
   margin: 20px auto;

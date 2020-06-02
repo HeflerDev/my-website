@@ -7,18 +7,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100;1,200&family=Source+Code+Pro:ital,wght@1,300;1,500&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <nav>
-        <div>
-          <div>
-            <%= link_to 'HeflerDev', '#' %>
+    <nav class='box'>
+        <div class='box-s column'>
+          <div class='box-s center'>
+            <%= link_to 'HeflerDev', root_path, class:'title' %>
           </div>
-          <div>
-            <%= link_to 'Social', about_path %>
-            <%= link_to 'Contact', contact_path %>
+          <div class='box-s around'>
+            <%= link_to 'Social', about_path, class:'btn w-25' %>
+            <%= link_to 'Contact', contact_path, class:'btn w-25' %>
           </div>
         </div>
     </nav>
@@ -26,7 +30,7 @@
       <%= yield %>
     </div>
     <footer>
-      <%= link_to 'Back', root_path %>
+      <%= link_to 'Back', root_path, class:'btn' %>
     </footer>
   </body>
 </html>
