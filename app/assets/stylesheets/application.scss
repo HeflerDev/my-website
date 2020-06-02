@@ -1,28 +1,159 @@
 @import "bootstrap";
-@import "./framework.scss"
-
 // Variables
 
-//Breakpoints
-$breakpoint-phone: 640px ;
-$breakpoint-tablet: 768px ;
-$breakpoint-desktop: 1024px ;
+  // Margins
+  $margin: 1rem ;
+  $margin-s: 2rem ;
+  $margin-m: 3rem ;
+  $margin-l: 4rem ;
+  $padding: $margin / 2 ;
+  $padding-s: $margin-s / 2 ;
+  $padding-m: $margin-m / 2 ;
+  $padding-l: $margin-l / 2 ;
 
-//Text Sizing
-$text-mobile-huge: 72px;
-$text-mobile-big: 56px;
-$text-mobile: 42px;
-$text-tablet: 24px;
+  // Breakpoints
+  $breakpoint-phone: 640px  ;
+  $breakpoint-tablet: 768px ;
+  $breakpoint-desktop: 1024px ;
 
-//Useful Colors
-$color-text-light: whitesmoke ;
-$color-text-dark: rgb(30,30,30);
-$color-dark: rgb(26,26,26);
-$color-primary: gray;
-$color-secondary: lightgray;
-$color-accent: rgb(56,56,56);
+  // Text Sizing
+  $text-mobile-huge: 72px;
+  $text-mobile-big: 56px;
+  $text-mobile: 42px;
+  $text-tablet: 24px;
+  $text-desktop: 12px;
 
-$radius-button: 1px;
+  // App Colors
+    // Text
+    $color-text-light: whitesmoke ;
+    $color-text-dark: rgb(30,30,30);
+    // Background
+    $color-dark: rgb(26,26,26);
+    $color-primary: gray;
+    $color-secondary: lightgray;
+    $color-accent: rgb(56,56,56);
+
+  // App Radius
+  $radius: 1px;
+
+// Patterns
+*{
+  font-size: $text-mobile;
+
+  @media screen and (min-device-width: $breakpoint-phone) {
+    font-size: $text-tablet;
+  }
+
+  @media screen and (min-device-width: $breakpoint-desktop) {
+    font-size: $text-desktop;
+  }
+
+}
+
+.box {
+  display: flex ;
+
+  @media screen and (max-device-width: $breakpoint-phone) {
+    margin: $margin ;
+    padding: $padding ;
+  }
+
+  @media screen and (min-device-width: $breakpoint-phone) {
+    margin: $margin-s ;
+    padding: $padding-s ;
+  }
+
+  @media screen and (min-device-width: $breakpoint-tablet) {
+      margin: $margin-m ;
+      padding: $padding-m ;
+  }
+
+  @media screen and (min-device-width: $breakpoint-desktop) {
+      margin: $margin-l ;
+      padding: $padding-l ;
+  }
+
+  .column {
+    flex-direction: column;
+  }
+
+  .start {
+    justify-content: flex-start;
+  }
+
+  .center {
+    justify-content: center;
+  }
+
+  .end {
+    justify-content: flex-end;
+  }
+
+  .around {
+    justify-content: space-around;
+  }
+
+  .between {
+    justify-content: space-between;
+  }
+
+}
+
+.box-s {
+  display: flex ;
+
+  @media screen and (max-width: $breakpoint-phone) {
+    margin: $margin / 2 ;
+    padding: $padding / 2 ;
+  }
+
+  @media screen and (min-width: $breakpoint-phone) {
+    margin: $margin-s / 2 ;
+    padding: $padding-s / 2 ;
+  }
+
+  @media screen and (min-width: $breakpoint-tablet) {
+      margin: $margin-m / 2;
+      padding: $padding-m / 2;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+      margin: $margin-l / 2;
+      padding: $padding-l / 2;
+  }
+
+  .column {
+    flex-direction: column;
+  }
+
+  .start {
+    justify-content: flex-start;
+  }
+
+  .center {
+    justify-content: center;
+  }
+
+  .end {
+    justify-content: flex-end;
+  }
+
+  .around {
+    justify-content: space-around;
+  }
+
+  .between {
+    justify-content: space-between;
+  }
+
+}
+
+
+
+.border-rounded {
+  border: solid $color-primary 2px;
+  border-radius: 5px;
+}
 
 nav {
   background-color: $color-primary;
@@ -30,7 +161,7 @@ nav {
       font-size: 2.5rem ;
       text-align: center ;
       border: solid $color-dark 1px ;
-      border-radius: $radius-button ;
+      border-radius: 1px ;
     }
     .logo {
       font-size: 5rem ;
@@ -39,7 +170,6 @@ nav {
 
 section {
   text-align: center;
-  border: solid $color-primary 2px;
   border-radius: 5px;
   span{
     text-align: center;
