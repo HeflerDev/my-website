@@ -11,18 +11,18 @@
       </div>
     <% end %>
     <div class='box column'>
-      <div class="box-s column">
+      <div class="box-s form column">
         <%= form.label 'Your Email', class:'box-s' %>
-        <%= form.text_field :email %>
+        <%= form.text_field :email, class:'field' %>
       </div>
 
-      <div class="box-s column">
+      <div class="box-s form column">
         <%= form.label 'Text', class:'box-s' %>
-        <%= form.text_area :text %>
+        <%= form.text_area :text, class:'field' %>
       </div>
 
       <div class="box-s center">
-        <%= form.submit 'Send Message' %>
+        <%= form.submit 'Send Message', class:'btn' %>
       </div>
     </div>
     <% end %>

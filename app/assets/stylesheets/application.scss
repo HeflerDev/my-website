@@ -33,10 +33,17 @@
     $color-text-light: whitesmoke ;
     $color-text-dark: rgb(30,30,30);
     // Background
-    $color-dark: rgb(26,26,26);
-    $color-primary: gray;
-    $color-secondary: lightgray;
-    $color-accent: rgb(56,56,56);
+    $color-opposite: rgba(195,195,255,1) ;
+    $color-primary: #2B3A40 ;
+    $color-secondary: #1B2326;
+    $color-accent: #324E73 ;
+    // Color Library
+      /* Color Theme Swatches in Hex */
+        $Dark-Theme-1-hex: #304673;
+        $Dark-Theme-2-hex: #324E73;
+        $Dark-Theme-3-hex: #2B3A40;
+        $Dark-Theme-4-hex: #1B2326;
+        $Dark-Theme-5-hex: #F0F2F2;
 
   // App Radius
   $radius: 1px;
@@ -158,21 +165,23 @@
 .btn {
   border: solid $color-secondary 2px;
   background: $color-accent ;
-  color: $color-secondary ;
+  color: $color-opposite ;
   transition: 0.2s;
+  font-family: $font-accent;
   &:hover {
+    background: $color-opposite;
     transition: 0.2s;
     transform: scale(1.1);
   }
 }
 
 .border-rounded {
-  border: solid $color-secondary 2px;
+  border: solid $color-opposite 2px;
   border-radius: 5px;
 }
 
 .title {
-  color: $color-accent ;
+  color: $color-opposite ;
   text-decoration: none;
   transition: 0.1s ;
   font-family: $font-primary ;
@@ -180,9 +189,22 @@
   &:hover {
     transform: scale(1.1);
     text-decoration: none;
-    color: $color-accent;
+    color: $color-opposite;
     transition: 0.1s ;
   }
+}
+
+.form {
+  color: $color-opposite ;
+  .field {
+    border-radius: 5px;
+    background: $color-primary;
+    color: $color-opposite ;
+  }
+}
+
+body {
+  background-color: $color-secondary;
 }
 
 nav {
@@ -190,7 +212,7 @@ nav {
     .button {
       font-size: 2.5rem ;
       text-align: center ;
-      border: solid $color-dark 1px ;
+      border: solid $color-opposite 1px ;
       border-radius: 1px ;
     }
     .logo {
@@ -198,17 +220,41 @@ nav {
     }
 }
 
+a {
+    text-decoration: none ;
+    transition: 0.2s ;
+    &:hover {
+      transition: 0.2s ;
+      text-decoration: none ;
+      transform: scale(2.0);
+    }
+}
+
+.link-neutral {
+  text-decoration: none ;
+  transition: 0.2s ;
+  color: $color-opposite ;
+  &:hover {
+    transition: 0.2s ;
+    text-decoration: none ;
+    transform: scale(2.0);
+    color: $color-opposite ;
+  }
+}
+
 section {
   text-align: center;
   border-radius: 5px;
   span{
+    font-family: $font-accent ;
+    font-weight: 100;
     text-align: center;
-    color: $color-text-dark;
     font-size: $text-mobile-huge;
   }
   p {
     text-align: center;
     font-size: $text-mobile;
+    color: $color-opposite;
   }
 }
 
@@ -226,4 +272,9 @@ section {
   p {
     font-size: $text-mobile-big;
   }
+}
+
+.text-secondary {
+  font-family: $font-secondary ;
+  color: $color-opposite;
 }

@@ -21,16 +21,13 @@
             <%= link_to 'HeflerDev', root_path, class:'title' %>
           </div>
           <div class='box-s around'>
-            <%= link_to 'Social', about_path, class:'btn w-25' %>
-            <%= link_to 'Contact', contact_path, class:'btn w-25' %>
+            <%= link_to 'Social', about_path, class:'btn' %>
+            <%= link_to 'Contact', contact_path, class:'btn' %>
           </div>
         </div>
     </nav>
     <div class='box border-s'>
       <%= yield %>
     </div>
-    <footer>
-      <%= link_to 'Back', root_path, class:'btn' %>
-    </footer>
   </body>
 </html>
